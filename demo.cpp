@@ -21,9 +21,9 @@ int main(){
 			arr_len.erase(len);
 			sum-=len;
 			if(maxlen==len)
-				maxlen=*arr_len.begin();
+				maxlen=*(--arr_len.end());
 		}
-		if(sum>2*maxlen)
+		if(arr_len.size()>2 &&  sum>2*maxlen)
 			cout << "Yes" << endl;
 		else
 			cout << "No" << endl;
